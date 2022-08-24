@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <style>
+        body .shell-main-footer {
+            width: 100%;
+            position: relative;
+            height: 144px;
+            transform: translateY(100px);
+            display: flex;
+            justify-content: center;
+            letter-spacing: 2px;
+            align-items: center;
+            text-align: center;
+            font: 100 30px 'font';
+            background-color: black;
+          }
+    </style>
+</head>
+
+<body>
+    <div class="shell">
+        <div class="shell-top">
+            <div class="word">
+                <h2>深耕传统，复原天文之美</h2>
+                <h2>着眼未来，推动数字教育</h2>
+            </div>
+            <div class="button">
+                <button type="button" onclick="JavaScript:window.location.href='index_detail.html';">了解更多</button>
+            </div>
+            <div class="down"></div>
+            <img src="./image/indexbackground.png" alt="">
+
+        </div>
+        <div class="shell-main">
+            <div class="shell-main-nav">
+                <div class="logo">
+                    <img src="./image/logo icon.png" alt="">
+                    <span>DDesignees</span>
+                </div>
+                <ul>
+                    <li><a href="./index.html">首页</a></li>
+                    <li><a href="./model_orbit.html">模型</a></li>
+                    <li><a href="./sketch.html">绘本</a></li>
+                    <li><a href="./merch.html">文创产品</a></li>
+                    <li><a href="./research.html">调研实践</a></li>
+                    <div class="nav-box"></div>
+                </ul>
+            </div>
+            <div class="shell-main-lbt">
+                <div class="container">
+                    <div class="item">
+                        <a href="./model_orbit.html">
+                        <img src="./image/sundial.png" alt="">
+                        </a>
+                        <h2>赤道式日晷</h2>
+                        <div class="word">
+                            <p>最经典的</p>
+                        </div>    
+                    </div>
+                    <div class="item">
+                        <a href="./model_move.html">
+                        <img src="./image/地动仪3.png" alt="">
+                        </a>
+                        <h2>侯风地动仪</h2>
+                        <div class="word">
+                            <p>最富争议的</p>
+                        </div>    
+                    </div>
+                    <div class="item">
+                        <a href="./model_3.html">
+                        <img src="./image/pic3.png" alt="">
+                        </a>
+                        <h2>玑衡抚辰仪</h2>
+                        <div class="word">
+                            <p>最后的</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shell-main-sketchbook">
+                <div class="container">
+                    <a href="./make.html">
+                    <img src="./image/儿童绘本.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="shell-main-merch">
+                <div class="container">
+                    <a href="./painter.html">
+                    <img src="./image/文创产品.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="shell-main-we">
+                <div class="container">
+                    <img src="./image/yellow.png" alt="">
+                    <div class="word1">
+                        <h1>您是否愿意参加我们的调研，</h1>
+                    </div>
+                    <div class="word2">
+                        <h1>以便我们为您带来更好的作品。</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="shell-main-footer">
+                <div class="container">
+                    <div class="footer-left">
+                        <div class="footer-left-logo">
+                            <img src="./image/logo icon.png" alt="">
+                            <span>DDesignees</span>
+                        </div>
+                        <div class="footer-left-word">
+                            <p>联系我们</p>
+                            <p>公众号：DDesignees</p>
+                            <p>邮箱：xxxxx@xxx.com</p>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <div class="footer-right-word">
+                            <p>以好奇驱动，将讯息传递。</p>
+                            <p>Think big, starts small.</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+</body>
+<!-- 引入jquery -->
+<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
+<script>
+    window.addEventListener('scroll', function () {
+        let top = window.scrollY
+        if (top != 0) {
+            $('.shell-top').css('top', '-100vh')
+            $('.shell-main').css('top', '0')
+
+        } else {
+            $('.shell-top').css('top', '0px')
+            $('.shell-main').css('top', '100vh')
+        }
+        if (top > 250) {
+            $('.shell-main-header-left-top').css('opacity', '1')
+            $('.shell-main-header-left-top').css('transform', 'translateY(0px)')
+            $('.shell-main-header-left-bottom').css('opacity', '1')
+            $('.shell-main-header-left-bottom').css('transform', 'translateY(0px)')
+            $('.shell-main-header-left-footer').css('opacity', '1')
+            $('.shell-main-header-left-footer').css('transform', 'translateY(0px)')
+        } else {
+            $('.shell-main-header-left-top').css('opacity', '0')
+            $('.shell-main-header-left-top').css('transform', 'translateY(400px)')
+            $('.shell-main-header-left-bottom').css('opacity', '0')
+            $('.shell-main-header-left-bottom').css('transform', 'translateY(400px)')
+            $('.shell-main-header-left-footer').css('opacity', '0')
+            $('.shell-main-header-left-footer').css('transform', 'translateY(400px)')
+        }
+    })
+</script>
+
+</html>
