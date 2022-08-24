@@ -51,7 +51,6 @@ body .shell-main-sidebar .wrap ul .nav-box {
     transition: .5s;
   }
 
-
 body .shell-main-sidebar .wrap ul li:nth-child(1):hover~.nav-box {
     bottom: 140px;
     background-color: rgb(255, 255, 255);
@@ -64,7 +63,6 @@ body .shell-main-sidebar .wrap ul li:nth-child(3):hover~.nav-box {
     bottom: 3px;
     background-color: rgb(255, 255, 255);
 }
-
 
 
 
